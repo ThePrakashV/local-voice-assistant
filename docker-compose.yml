@@ -1,0 +1,21 @@
+services:
+  voice-assistant:
+    build: .
+    image: voice-assistant:latest
+    container_name: voice-assistant
+    ports:
+      - "8001:8000"
+    environment:
+      - OLLAMA_BASE_URL=http://host.docker.internal:11434
+      - OLLAMA_MODEL=llama3.2
+      - WHISPER_MODEL=base
+      - PIPER_VOICE=en_US-lessac-medium
+      - HF_HUB_OFFLINE=1
+    volumes:
+      - ./models:/app/models
+      - ./data:/app/data
+      - ./logs:/app/logs
+      - ${USERPROFILE}/.cache/huggingface:/app/cache/huggingface
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    restart: unless-stopped

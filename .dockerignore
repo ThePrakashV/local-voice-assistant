@@ -1,0 +1,16 @@
+venv/
+__pycache__/
+*.pyc
+.git/
+.gitignore
+.env
+.vscode/
+.idea/
+logs/
+data/
+models/
+*.wav
+*.mp3
+*.md
+Dockerfile
+docker-compose.yml

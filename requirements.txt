@@ -1,0 +1,15 @@
+fastapi
+uvicorn[standard]
+websockets
+python-dotenv
+pydantic
+numpy
+requests
+httpx
+sounddevice
+soundfile
+faster-whisper
+plotly
+pandas
+piper-tts
+python-multipart

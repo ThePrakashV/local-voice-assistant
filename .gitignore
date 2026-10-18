@@ -1,0 +1,23 @@
+# Python
+venv/
+.venv/
+__pycache__/
+*.pyc
+
+# Secrets / local config
+.env
+
+# Generated data (audio, dashboard, results)
+logs/
+data/
+*.wav
+*.mp3
+
+# Downloaded models (Piper voices etc.)
+models/
+
+# Editors / OS
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
